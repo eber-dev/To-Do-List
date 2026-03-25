@@ -59,3 +59,40 @@ function seccion3() {
     botonesfiltro.appendChild(completadasfiltro);
     return parte3;
 }
+
+export function crearModal() {
+    const modal = document.createElement("dialog");
+    modal.id = "modal";
+    const header_form = document.createElement("div");
+    header_form.classList.add("header_form");
+    const titular = document.createElement("p");
+    titular.textContent = "Mis Tareas";
+    const cerrar_modal = document.createElement("button");
+    cerrar_modal.textContent = "X";
+
+    const contenedor_formulario = document.createElement("div");
+    const formulario = document.createElement("form");
+    formulario.action = "";
+    formulario.method = "post";
+    formulario.classList.add("formulario");
+
+    const info1 = document.createElement("div");
+    const label1 = document.createElement("label");
+    label1.setAttribute("for", "titulo");
+    label1.textContent = "Titulo: ";
+    const input1 = document.createElement("input");
+    input1.type = "text";
+    input1.id = "titulo";
+    input1.name = "titulo";
+    input1.required = true;
+
+    const info2 = document.createElement("div");
+    const label2 = document.createElement("label");
+    label2.setAttribute("for", "descripcion");
+    label2.textContent = "Descripcion: ";
+    const input2 = document.createElement("input");
+    input2.type = "text";
+    input2.id = "descripcion";
+    input2.name = "descripcion";
+    input2.required = true;
+}

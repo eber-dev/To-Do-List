@@ -128,6 +128,10 @@ export function crearModal() {
         input4.appendChild(opcion);
     });
 
+    const botonEnviar = document.createElement("button");
+    botonEnviar.type = "submit";
+    botonEnviar.textContent = "Guardar";
+
     contenedor_formulario.appendChild(formulario);
     formulario.appendChild(info1);
     info1.appendChild(label1);
@@ -141,6 +145,7 @@ export function crearModal() {
     formulario.appendChild(info4);
     info4.appendChild(label4);
     info4.appendChild(input4);
+    formulario.appendChild(botonEnviar);
 
     cerrar_modal.addEventListener("click", () => {
         modal.close();

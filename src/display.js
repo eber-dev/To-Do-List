@@ -141,4 +141,8 @@ export function crearModal() {
     formulario.appendChild(info4);
     info4.appendChild(label4);
     info4.appendChild(input4);
+
+    cerrar_modal.addEventListener("click", () => {
+        modal.close();
+    });
 }

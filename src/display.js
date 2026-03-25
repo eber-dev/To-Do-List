@@ -1,4 +1,5 @@
 import añadir from "./images/add.svg";
+import { compareAsc, format } from "date-fns";
 
 export function loadContainer() {
     const container = document.querySelector(".container");
@@ -95,4 +96,49 @@ export function crearModal() {
     input2.id = "descripcion";
     input2.name = "descripcion";
     input2.required = true;
+
+    const info3 = document.createElement("div");
+    const label3 = document.createElement("label");
+    label3.setAttribute("for", "fecha");
+    label3.textContent = "Fecha Limite: ";
+    const input3 = document.createElement("input");
+    input3.type = "date";
+    input3.id = "fecha";
+    input3.name = "fecha";
+    input3.required = true;
+
+    const info4 = document.createElement("div");
+    const label4 = document.createElement("label");
+    label4.setAttribute("for", "prioridad");
+    label4.textContent = "Selecciona una opcion: ";
+    const input4 = document.createElement("select");
+    input4.id = "prioridad";
+    input4.name = "prioridad";
+    input4.required = true;
+    const opciones = [
+        { value: "1", text: "Alta Prioridad" },
+        { value: "2", text: "Media Prioridad" },
+        { value: "3", text: "Baja Prioridad" },
+    ];
+
+    opciones.forEach((elemento) => {
+        const opcion = document.createElement("option");
+        opcion.value = elemento.value;
+        opcion.text = elemento.text;
+        input4.appendChild(opcion);
+    });
+
+    contenedor_formulario.appendChild(formulario);
+    formulario.appendChild(info1);
+    info1.appendChild(label1);
+    info1.appendChild(input1);
+    formulario.appendChild(info2);
+    info2.appendChild(label2);
+    info2.appendChild(input2);
+    formulario.appendChild(info3);
+    info3.appendChild(label3);
+    info3.appendChild(input3);
+    formulario.appendChild(info4);
+    info4.appendChild(label4);
+    info4.appendChild(input4);
 }

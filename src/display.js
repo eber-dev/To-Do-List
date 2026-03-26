@@ -33,6 +33,14 @@ function seccion1() {
     agregartarea.appendChild(iconotexto);
     parte1.appendChild(titulolistas);
     parte1.appendChild(agregartarea);
+
+    const aperturarmodal = crearModal();
+
+    agregartarea.addEventListener("click", (e) => {
+        e.preventDefault();
+        aperturarmodal.showModal();
+    });
+
     return parte1;
 }
 
@@ -136,6 +144,10 @@ export function crearModal() {
     botonEnviar.type = "submit";
     botonEnviar.textContent = "Guardar";
 
+    modal.appendChild(header_form);
+    header_form.appendChild(titular);
+    header_form.appendChild(cerrar_modal);
+    modal.appendChild(contenedor_formulario);
     contenedor_formulario.appendChild(formulario);
     formulario.appendChild(info1);
     info1.appendChild(label1);
@@ -155,4 +167,6 @@ export function crearModal() {
     cerrar_modal.addEventListener("click", () => {
         modal.close();
     });
+
+    return modal;
 }

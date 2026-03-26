@@ -11,3 +11,7 @@ export function eliminarTarea(objeto) {
         }
     });
 }
+
+export function mostrarAlmacen() {
+    return almacen;
+}

@@ -1,7 +1,8 @@
 import "./styles.css";
 import { loadContainer } from "./display.js";
-import { obtenerDatos } from "./controller.js";
+import { procesaDatos } from "./controller.js";
 import { crearModal } from "./display.js";
+import { eliminarTarea } from "./box.js";
 
 loadContainer();
 crearModal();
@@ -12,4 +13,6 @@ añadir.addEventListener("click", () => {
     const modal = document.getElementById("modal");
     modal.showModal();
 });
-obtenerDatos();
+
+const seleccionformulario = document.querySelector(".formulario");
+procesaDatos(seleccionformulario);

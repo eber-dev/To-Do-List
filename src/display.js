@@ -1,34 +1,34 @@
 import añadir from "./images/add.svg";
-import { compareAsc, format } from "date-fns";
 
 export function loadContainer() {
-    const container = document.querySelector(".container");
-    const titulo = document.querySelector(".titulo");
+    const campotitulo = document.querySelector(".titulo");
+    const titulo = document.createElement("h1");
+    titulo.textContent = "Mi To-Do List";
+    const subtitulo = document.createElement("p");
+    subtitulo.textContent = "Organiza facilmente tus tareas";
     const app = document.querySelector(".app");
-
-    const cuadrolista = document.createElement("div");
 
     let primero = seccion1();
     let segundo = seccion2();
     let tercero = seccion3();
 
-    container.appendChild(titulo);
-    container.appendChild(app);
-    app.appendChild(cuadrolista);
-    cuadrolista.appendChild(primero);
-    cuadrolista.appendChild(segundo);
-    cuadrolista.appendChild(tercero);
+    campotitulo.appendChild(titulo);
+    campotitulo.appendChild(subtitulo);
+    app.appendChild(primero);
+    app.appendChild(segundo);
+    app.appendChild(tercero);
 }
 
 function seccion1() {
     const parte1 = document.createElement("div");
+    parte1.classList.add("parte1");
     const titulolistas = document.createElement("h2");
     titulolistas.textContent = "Mis Tareas Pendientes";
     const agregartarea = document.createElement("button");
     const iconoagregar = document.createElement("img");
     iconoagregar.src = añadir;
     agregartarea.appendChild(iconoagregar);
-    iconoagregar.textContent = "Agregar";
+    agregartarea.textContent = "Agregar";
     parte1.appendChild(titulolistas);
     parte1.appendChild(agregartarea);
     return parte1;
@@ -36,11 +36,13 @@ function seccion1() {
 
 function seccion2() {
     const parte2 = document.createElement("div");
+    parte2.classList.add("parte2");
     return parte2;
 }
 
 function seccion3() {
     const parte3 = document.createElement("div");
+    parte3.classList.add("parte3");
     const informacion = document.createElement("div");
     const pendientes = document.createElement("p");
     const completadas = document.createElement("p");
@@ -146,6 +148,7 @@ export function crearModal() {
     info4.appendChild(label4);
     info4.appendChild(input4);
     formulario.appendChild(botonEnviar);
+    document.body.appendChild(modal);
 
     cerrar_modal.addEventListener("click", () => {
         modal.close();

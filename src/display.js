@@ -27,8 +27,10 @@ function seccion1() {
     const agregartarea = document.createElement("button");
     const iconoagregar = document.createElement("img");
     iconoagregar.src = añadir;
+    const iconotexto = document.createElement("p");
+    iconotexto.textContent = "Agregar";
     agregartarea.appendChild(iconoagregar);
-    agregartarea.textContent = "Agregar";
+    agregartarea.appendChild(iconotexto);
     parte1.appendChild(titulolistas);
     parte1.appendChild(agregartarea);
     return parte1;

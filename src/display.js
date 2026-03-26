@@ -25,6 +25,7 @@ function seccion1() {
     const titulolistas = document.createElement("h2");
     titulolistas.textContent = "Mis Tareas Pendientes";
     const agregartarea = document.createElement("button");
+    agregartarea.id = "añadir";
     const iconoagregar = document.createElement("img");
     iconoagregar.src = añadir;
     const iconotexto = document.createElement("p");
@@ -33,13 +34,6 @@ function seccion1() {
     agregartarea.appendChild(iconotexto);
     parte1.appendChild(titulolistas);
     parte1.appendChild(agregartarea);
-
-    const aperturarmodal = crearModal();
-
-    agregartarea.addEventListener("click", (e) => {
-        e.preventDefault();
-        aperturarmodal.showModal();
-    });
 
     return parte1;
 }

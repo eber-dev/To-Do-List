@@ -27,3 +27,13 @@ function almacenamientolocal() {
     let lit = localStorage.getItem("almacenamiento");
     return lit;
 }
+
+export function cambiarestado(checkbox) {
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+}

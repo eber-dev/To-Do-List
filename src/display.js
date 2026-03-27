@@ -1,4 +1,5 @@
 import añadir from "./images/add.svg";
+import { cambiarestado } from "./controller.js";
 
 export function loadContainer() {
     const campotitulo = document.querySelector(".titulo");
@@ -163,4 +164,32 @@ export function crearModal() {
     });
 
     return modal;
+}
+
+export function añadirTarjeta() {
+    const contenedor_tarjetas = document.querySelector(".parte2");
+    const check = document.createElement("div");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    const titulo_descripcion = document.createElement("div");
+    const nombretarea = document.createElement("h2");
+    const descripciontarea = document.createElement("p");
+    const fecha = document.createElement("div");
+    const fechaformato = document.createElement("h3");
+    const prioridad = document.createElement("div");
+    const nivelprioridad = document.createElement("p");
+    const borrar = document.createElement("div");
+    const botonborrar = document.createElement("button");
+
+    contenedor_tarjetas.appendChild(check);
+    check.appendChild(checkbox);
+    contenedor_tarjetas.appendChild(titulo_descripcion);
+    titulo_descripcion.appendChild(nombretarea);
+    titulo_descripcion.appendChild(descripciontarea);
+    contenedor_tarjetas.appendChild(fecha);
+    fecha.appendChild(fechaformato);
+    contenedor_tarjetas.appendChild(prioridad);
+    prioridad.appendChild(nivelprioridad);
+    contenedor_tarjetas.appendChild(borrar);
+    borrar.appendChild(botonborrar);
 }

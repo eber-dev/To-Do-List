@@ -1,4 +1,6 @@
 import añadir from "./images/add.svg";
+import calendario from "./images/calendar.svg";
+import borrar from "./images/delete.svg";
 import { cambiarestado } from "./controller.js";
 
 export function loadContainer() {
@@ -166,30 +168,43 @@ export function crearModal() {
     return modal;
 }
 
-export function añadirTarjeta() {
-    const contenedor_tarjetas = document.querySelector(".parte2");
+export function añadirTarjeta(array) {
+    const contenedor_tarjetas = document.createElement("div");
+    const tarjetas = document.createElement("div");
+    tarjetas.dataset.id = array.at(-1).id;
     const check = document.createElement("div");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     const titulo_descripcion = document.createElement("div");
     const nombretarea = document.createElement("h2");
+    nombretarea.textContent = array.at(-1).titulo;
     const descripciontarea = document.createElement("p");
+    descripciontarea.textContent = array.at(-1).descripcion;
     const fecha = document.createElement("div");
+    const fechaicono = document.createElement("img");
+    fechaicono.src = calendario;
     const fechaformato = document.createElement("h3");
+    fechaformato.textContent = "Fecha: " + array.at(-1).fecha;
     const prioridad = document.createElement("div");
     const nivelprioridad = document.createElement("p");
+    nivelprioridad.textContent = array.at(-1).prioridad;
     const borrar = document.createElement("div");
     const botonborrar = document.createElement("button");
+    const borraricono = document.createElement("img");
+    borraricono.src = borrar;
 
-    contenedor_tarjetas.appendChild(check);
+    contenedor_tarjetas.appendChild(tarjetas);
+    tarjetas.appendChild(check);
     check.appendChild(checkbox);
-    contenedor_tarjetas.appendChild(titulo_descripcion);
+    tarjetas.appendChild(titulo_descripcion);
     titulo_descripcion.appendChild(nombretarea);
     titulo_descripcion.appendChild(descripciontarea);
-    contenedor_tarjetas.appendChild(fecha);
+    tarjetas.appendChild(fecha);
+    fecha.appendChild(fechaicono);
     fecha.appendChild(fechaformato);
-    contenedor_tarjetas.appendChild(prioridad);
+    tarjetas.appendChild(prioridad);
     prioridad.appendChild(nivelprioridad);
-    contenedor_tarjetas.appendChild(borrar);
+    tarjetas.appendChild(borrar);
     borrar.appendChild(botonborrar);
+    botonborrar.appendChild(borraricono);
 }

@@ -24,7 +24,7 @@ function resetearmodal(formulario) {
 
 function almacenamientolocal() {
     localStorage.setItem("almacenamiento", JSON.stringify(almacen));
-    let lit = localStorage.getItem("almacenamiento");
+    let lit = JSON.parse(localStorage.getItem("almacenamiento"));
     return lit;
 }
 

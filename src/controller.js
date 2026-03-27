@@ -10,9 +10,17 @@ export function procesaDatos(formulario) {
             ...tarea0,
         };
         agregarTarea(tarea1);
-        console.log(almacen);
-        formulario.reset();
-        const modal = document.getElementById("modal");
-        modal.close();
+
+        resetearmodal(formulario);
     });
+}
+
+function resetearmodal(formulario) {
+    formulario.reset();
+    const modal = document.getElementById("modal");
+    modal.close();
+}
+
+function almacenamientolocal(almacen) {
+    localStorage.setItem("almacenamiento", almacen);
 }

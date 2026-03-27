@@ -29,12 +29,18 @@ function almacenamientolocal() {
     return lit;
 }
 
-export function cambiarestado(checkbox, carta) {
+export function cambiarestado(checkbox, carta, array) {
     checkbox.addEventListener("change", () => {
         if (checkbox.checked) {
             carta.style.textDecoration = "line-through";
+            array.forEach((element) => {
+                element.id = "completado";
+            });
         } else {
             carta.style.textDecoration = "none";
+            array.forEach((element) => {
+                element.id = "pendiente";
+            });
         }
     });
 }

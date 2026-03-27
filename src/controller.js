@@ -8,6 +8,7 @@ export function procesaDatos(formulario) {
         let tarea1 = {
             id: crypto.randomUUID().slice(0, 6),
             ...tarea0,
+            estado: "pendiente",
         };
         agregarTarea(tarea1);
         resetearmodal(formulario);
@@ -28,12 +29,12 @@ function almacenamientolocal() {
     return lit;
 }
 
-export function cambiarestado(checkbox) {
+export function cambiarestado(checkbox, carta) {
     checkbox.addEventListener("change", () => {
         if (checkbox.checked) {
-            return true;
+            carta.style.textDecoration = "line-through";
         } else {
-            return false;
+            carta.style.textDecoration = "none";
         }
     });
 }

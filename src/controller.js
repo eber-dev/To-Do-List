@@ -10,8 +10,9 @@ export function procesaDatos(formulario) {
             ...tarea0,
         };
         agregarTarea(tarea1);
-
         resetearmodal(formulario);
+        let local = almacenamientolocal();
+        return local;
     });
 }
 
@@ -21,6 +22,8 @@ function resetearmodal(formulario) {
     modal.close();
 }
 
-function almacenamientolocal(almacen) {
-    localStorage.setItem("almacenamiento", almacen);
+function almacenamientolocal() {
+    localStorage.setItem("almacenamiento", JSON.stringify(almacen));
+    let lit = localStorage.getItem("almacenamiento");
+    return lit;
 }

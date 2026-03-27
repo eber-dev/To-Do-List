@@ -11,5 +11,8 @@ export function procesaDatos(formulario) {
         };
         agregarTarea(tarea1);
         console.log(almacen);
+        formulario.reset();
+        const modal = document.getElementById("modal");
+        modal.close();
     });
 }

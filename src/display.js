@@ -168,26 +168,26 @@ export function crearModal() {
     return modal;
 }
 
-export function añadirTarjeta(array) {
+export function añadirTarjeta(array, tarea) {
     const contenedor_tarjetas = document.querySelector(".parte2");
     const tarjetas = document.createElement("div");
-    tarjetas.dataset.id = array.at(-1).id;
+    tarjetas.dataset.id = tarea.id;
     const check = document.createElement("div");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     const titulo_descripcion = document.createElement("div");
     const nombretarea = document.createElement("h2");
-    nombretarea.textContent = array.at(-1).titulo;
+    nombretarea.textContent = tarea.titulo;
     const descripciontarea = document.createElement("p");
-    descripciontarea.textContent = array.at(-1).descripcion;
+    descripciontarea.textContent = tarea.descripcion;
     const fecha = document.createElement("div");
     const fechaicono = document.createElement("img");
     fechaicono.src = calendario;
     const fechaformato = document.createElement("h3");
-    fechaformato.textContent = "Fecha: " + array.at(-1).fecha;
+    fechaformato.textContent = "Fecha: " + tarea.fecha;
     const prioridad = document.createElement("div");
     const nivelprioridad = document.createElement("p");
-    nivelprioridad.textContent = array.at(-1).prioridad;
+    nivelprioridad.textContent = tarea.prioridad;
     const borrar = document.createElement("div");
     const botonborrar = document.createElement("button");
     const borraricono = document.createElement("img");

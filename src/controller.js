@@ -52,3 +52,15 @@ export function cambiarestado(checkbox, carta, array) {
         }
     });
 }
+
+export function eliminarCarta(boton, carta, array) {
+    boton.addEventListener("click", () => {
+        carta.remove();
+        array.forEach((elemento, indice) => {
+            if (elemento.id == carta.dataset.id) {
+                array.splice(indice, 1);
+            }
+        });
+        almacenamientolocal(array);
+    });
+}

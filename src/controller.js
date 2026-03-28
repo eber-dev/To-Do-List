@@ -67,3 +67,23 @@ export function renderizar() {
         añadirTarjeta(almacen, elemento);
     });
 }
+
+export function obtenercompletos() {
+    let contador = 0;
+    almacen.forEach((elemento) => {
+        if (elemento.estado == "completado") {
+            contador++;
+        }
+    });
+    return contador;
+}
+
+export function obtenerpendientes() {
+    let contador = 0;
+    almacen.forEach((elemento) => {
+        if (elemento.id == "pendiente") {
+            contador++;
+        }
+    });
+    return contador;
+}

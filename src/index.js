@@ -1,6 +1,6 @@
 import "./styles.css";
 import { loadContainer } from "./display.js";
-import { procesaDatos } from "./controller.js";
+import { procesaDatos, renderizar } from "./controller.js";
 import { crearModal } from "./display.js";
 import { eliminarTarea } from "./box.js";
 
@@ -16,3 +16,4 @@ añadir.addEventListener("click", () => {
 
 const seleccionformulario = document.querySelector(".formulario");
 procesaDatos(seleccionformulario);
+renderizar();

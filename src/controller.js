@@ -1,5 +1,4 @@
 import { agregarTarea } from "./box.js";
-import { almacen } from "./box.js";
 import { añadirTarjeta } from "./display.js";
 
 export function procesaDatos(formulario) {
@@ -11,11 +10,12 @@ export function procesaDatos(formulario) {
             ...tarea0,
             estado: "pendiente",
         };
-        agregarTarea(tarea1);
-        let local = almacenamientolocal(almacen);
+        let nuevo = agregarTarea(tarea1);
+        console.log(nuevo);
+        console.log(typeof nuevo);
         resetearmodal(formulario);
-        añadirTarjeta(local, tarea1);
-        return local;
+        añadirTarjeta(nuevo, tarea1);
+        añadirlocalstorage("local", nuevo);
     });
 }
 
@@ -25,10 +25,12 @@ function resetearmodal(formulario) {
     modal.close();
 }
 
-function almacenamientolocal(arreglo) {
-    localStorage.setItem("almacenamiento", JSON.stringify(arreglo));
-    let lit = JSON.parse(localStorage.getItem("almacenamiento"));
-    return lit;
+function añadirlocalstorage(clave, array) {
+    localStorage.setItem(clave, JSON.stringify(array));
+}
+
+function accederlocalstorage(clave) {
+    return JSON.parse(localStorage.getItem(clave));
 }
 
 export function cambiarestado(checkbox, carta, array) {
@@ -40,7 +42,8 @@ export function cambiarestado(checkbox, carta, array) {
                     element.estado = "completado";
                 }
             });
-            almacenamientolocal(array);
+            console.log(array);
+            añadirlocalstorage("local", array);
         } else {
             carta.style.textDecoration = "none";
             array.forEach((element) => {
@@ -48,7 +51,8 @@ export function cambiarestado(checkbox, carta, array) {
                     element.estado = "pendiente";
                 }
             });
-            almacenamientolocal(array);
+            console.log(array);
+            añadirlocalstorage("local", array);
         }
     });
 }
@@ -61,6 +65,7 @@ export function eliminarCarta(boton, carta, array) {
                 array.splice(indice, 1);
             }
         });
-        almacenamientolocal(array);
+        console.log(array);
+        añadirlocalstorage("local", array);
     });
 }

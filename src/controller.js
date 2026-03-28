@@ -1,5 +1,6 @@
 import { agregarTarea } from "./box.js";
 import { almacen } from "./box.js";
+import { añadirTarjeta } from "./display.js";
 
 export function procesaDatos(formulario) {
     formulario.addEventListener("submit", (e) => {
@@ -13,6 +14,7 @@ export function procesaDatos(formulario) {
         agregarTarea(tarea1);
         resetearmodal(formulario);
         let local = almacenamientolocal();
+        añadirTarjeta(local);
         return local;
     });
 }

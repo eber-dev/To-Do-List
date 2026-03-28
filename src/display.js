@@ -1,7 +1,7 @@
 import añadir from "./images/add.svg";
 import calendario from "./images/calendar.svg";
 import borrarimagen from "./images/delete.svg";
-import { cambiarestado } from "./controller.js";
+import { cambiarestado, eliminarCarta } from "./controller.js";
 
 export function loadContainer() {
     const campotitulo = document.querySelector(".titulo");
@@ -194,6 +194,7 @@ export function añadirTarjeta(array) {
     borraricono.src = borrarimagen;
 
     cambiarestado(checkbox, tarjetas, array);
+    eliminarCarta(botonborrar, tarjetas, array);
 
     contenedor_tarjetas.appendChild(tarjetas);
     tarjetas.appendChild(check);

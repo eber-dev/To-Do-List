@@ -27,10 +27,6 @@ function añadirlocalstorage(clave, array) {
     localStorage.setItem(clave, JSON.stringify(array));
 }
 
-function accederlocalstorage(clave) {
-    return JSON.parse(localStorage.getItem(clave));
-}
-
 export function cambiarestado(checkbox, carta, array) {
     checkbox.addEventListener("change", () => {
         if (checkbox.checked) {
@@ -40,7 +36,6 @@ export function cambiarestado(checkbox, carta, array) {
                     element.estado = "completado";
                 }
             });
-            console.log(array);
             añadirlocalstorage("local", array);
         } else {
             carta.style.textDecoration = "none";
@@ -49,7 +44,6 @@ export function cambiarestado(checkbox, carta, array) {
                     element.estado = "pendiente";
                 }
             });
-            console.log(array);
             añadirlocalstorage("local", array);
         }
     });

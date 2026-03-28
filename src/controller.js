@@ -12,8 +12,8 @@ export function procesaDatos(formulario) {
             estado: "pendiente",
         };
         agregarTarea(tarea1);
+        let local = almacenamientolocal(almacen);
         resetearmodal(formulario);
-        let local = almacenamientolocal();
         añadirTarjeta(local);
         return local;
     });
@@ -25,8 +25,8 @@ function resetearmodal(formulario) {
     modal.close();
 }
 
-function almacenamientolocal() {
-    localStorage.setItem("almacenamiento", JSON.stringify(almacen));
+function almacenamientolocal(arreglo) {
+    localStorage.setItem("almacenamiento", JSON.stringify(arreglo));
     let lit = JSON.parse(localStorage.getItem("almacenamiento"));
     return lit;
 }
@@ -36,13 +36,19 @@ export function cambiarestado(checkbox, carta, array) {
         if (checkbox.checked) {
             carta.style.textDecoration = "line-through";
             array.forEach((element) => {
-                element.id = "completado";
+                if (carta.dataset.id == element.id) {
+                    element.estado = "completado";
+                }
             });
+            almacenamientolocal(array);
         } else {
             carta.style.textDecoration = "none";
             array.forEach((element) => {
-                element.id = "pendiente";
+                if (carta.dataset.id == element.id) {
+                    element.estado = "pendiente";
+                }
             });
+            almacenamientolocal(array);
         }
     });
 }

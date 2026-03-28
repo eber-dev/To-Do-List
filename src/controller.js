@@ -1,4 +1,4 @@
-import { agregarTarea } from "./box.js";
+import { agregarTarea, almacen } from "./box.js";
 import { añadirTarjeta } from "./display.js";
 
 export function procesaDatos(formulario) {
@@ -11,8 +11,6 @@ export function procesaDatos(formulario) {
             estado: "pendiente",
         };
         let nuevo = agregarTarea(tarea1);
-        console.log(nuevo);
-        console.log(typeof nuevo);
         resetearmodal(formulario);
         añadirTarjeta(nuevo, tarea1);
         añadirlocalstorage("local", nuevo);
@@ -67,5 +65,11 @@ export function eliminarCarta(boton, carta, array) {
         });
         console.log(array);
         añadirlocalstorage("local", array);
+    });
+}
+
+export function renderizar() {
+    almacen.forEach((elemento) => {
+        añadirTarjeta(almacen, elemento);
     });
 }

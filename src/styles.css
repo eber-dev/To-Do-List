@@ -24,3 +24,52 @@ body {
 .app {
     border: 1px solid blue;
 }
+
+.parte1 {
+    display: flex;
+    align-items: center;
+}
+
+.parte1 > h2 {
+    font-size: 2rem;
+}
+
+.parte1 > button {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.parte1 > button > img {
+    height: 2rem;
+}
+
+.parte2 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.parte2 > div {
+    display: flex;
+    border: 1px solid violet;
+}
+
+.check {
+    display: flex;
+}
+
+.informacion {
+    display: flex;
+}
+
+.fecha {
+    display: flex;
+}
+
+.prioridad {
+    display: flex;
+}
+
+.borrar {
+    display: flex;
+}

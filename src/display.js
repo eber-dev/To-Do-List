@@ -1,6 +1,6 @@
 import añadir from "./images/add.svg";
 import calendario from "./images/calendar.svg";
-import borrar from "./images/delete.svg";
+import borrarimagen from "./images/delete.svg";
 import { cambiarestado } from "./controller.js";
 
 export function loadContainer() {
@@ -169,7 +169,7 @@ export function crearModal() {
 }
 
 export function añadirTarjeta(array) {
-    const contenedor_tarjetas = document.createElement("div");
+    const contenedor_tarjetas = document.querySelector(".parte2");
     const tarjetas = document.createElement("div");
     tarjetas.dataset.id = array.at(-1).id;
     const check = document.createElement("div");
@@ -191,7 +191,9 @@ export function añadirTarjeta(array) {
     const borrar = document.createElement("div");
     const botonborrar = document.createElement("button");
     const borraricono = document.createElement("img");
-    borraricono.src = borrar;
+    borraricono.src = borrarimagen;
+
+    cambiarestado(checkbox, tarjetas, array);
 
     contenedor_tarjetas.appendChild(tarjetas);
     tarjetas.appendChild(check);

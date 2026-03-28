@@ -14,7 +14,7 @@ export function procesaDatos(formulario) {
         agregarTarea(tarea1);
         let local = almacenamientolocal(almacen);
         resetearmodal(formulario);
-        añadirTarjeta(local);
+        añadirTarjeta(local, tarea1);
         return local;
     });
 }

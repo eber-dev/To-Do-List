@@ -1,7 +1,8 @@
-export let almacen = [];
+export let almacen = JSON.parse(localStorage.getItem("local")) || [];
 
 export function agregarTarea(objeto) {
     almacen.push(objeto);
+    return almacen;
 }
 
 export function eliminarTarea(objeto) {

@@ -77,8 +77,10 @@ export function renderizar() {
 }
 
 function tachado() {
-    const check = document.querySelector(".clickeado");
-    check.click();
+    const check = document.querySelectorAll(".clickeado");
+    check.forEach((elemento) => {
+        elemento.checked = true;
+    });
 }
 
 function obtenerInformacion(arregloactual) {

@@ -14,6 +14,7 @@ export function procesaDatos(formulario) {
         resetearmodal(formulario);
         añadirTarjeta(nuevo, tarea1);
         añadirlocalstorage("local", nuevo);
+        obtenerInformacion();
     });
 }
 
@@ -61,6 +62,7 @@ export function eliminarCarta(boton, carta, array) {
         });
         console.log(array);
         añadirlocalstorage("local", array);
+        obtenerInformacion();
     });
 }
 
@@ -88,19 +90,8 @@ function obtenerInformacion() {
     almacen.forEach((elemento) => {
         if (elemento.estado == "completado") {
             completos++;
-            if (pendientes > 0) {
-                pendientes--;
-            } else {
-                pendientes = 0;
-            }
         } else if (elemento.estado == "pendiente") {
             pendientes++;
-
-            if (completos > 0) {
-                completos--;
-            } else {
-                completos = 0;
-            }
         }
     });
 

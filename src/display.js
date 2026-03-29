@@ -176,6 +176,7 @@ export function añadirTarjeta(array, tarea) {
     check.classList.add("check");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.classList.add("clickeado");
     const titulo_descripcion = document.createElement("div");
     titulo_descripcion.classList.add("informacion");
     const nombretarea = document.createElement("h2");

@@ -37,6 +37,7 @@ export function cambiarestado(checkbox, carta, array) {
                 }
             });
             añadirlocalstorage("local", array);
+            obtenerInformacion();
         } else {
             carta.style.textDecoration = "none";
             array.forEach((element) => {
@@ -45,6 +46,7 @@ export function cambiarestado(checkbox, carta, array) {
                 }
             });
             añadirlocalstorage("local", array);
+            obtenerInformacion();
         }
     });
 }
@@ -69,6 +71,7 @@ export function renderizar() {
             tachado();
         }
     });
+    obtenerInformacion();
 }
 
 function tachado() {
@@ -76,22 +79,31 @@ function tachado() {
     check.click();
 }
 
-export function obtenercompletos() {
-    let contador = 0;
+function obtenerInformacion() {
+    let completos = 0;
+    let pendientes = 0;
+    const tareapendiente = document.querySelector(".pendientes");
+    const tareacompletada = document.querySelector(".completadas");
+
     almacen.forEach((elemento) => {
         if (elemento.estado == "completado") {
-            contador++;
-        }
-    });
-    return contador;
-}
+            completos++;
+            if (pendientes > 0) {
+                pendientes--;
+            } else {
+                pendientes = 0;
+            }
+        } else if (elemento.estado == "pendiente") {
+            pendientes++;
 
-export function obtenerpendientes() {
-    let contador = 0;
-    almacen.forEach((elemento) => {
-        if (elemento.id == "pendiente") {
-            contador++;
+            if (completos > 0) {
+                completos--;
+            } else {
+                completos = 0;
+            }
         }
     });
-    return contador;
+
+    tareapendiente.textContent = pendientes + "pendientes";
+    tareacompletada.textContent = completos + "completadas";
 }

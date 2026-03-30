@@ -59,10 +59,13 @@ function seccion3() {
     const botonesfiltro = document.createElement("div");
     botonesfiltro.classList.add("botonesfiltro");
     const todasfiltro = document.createElement("button");
+    todasfiltro.classList.add("todasfiltro");
     todasfiltro.textContent = "Todas";
     const pendientesfiltro = document.createElement("button");
+    pendientesfiltro.classList.add("pendientesfiltro");
     pendientesfiltro.textContent = "Pendientes";
     const completadasfiltro = document.createElement("button");
+    completadasfiltro.classList.add("completadasfiltro");
     completadasfiltro.textContent = "Completadas";
     parte3.appendChild(informacion);
     informacion.appendChild(pendientes);

@@ -69,18 +69,8 @@ export function eliminarCarta(boton, carta, array) {
 export function renderizar() {
     almacen.forEach((elemento) => {
         añadirTarjeta(almacen, elemento);
-        if (elemento.estado == "completado") {
-            tachado();
-        }
     });
     obtenerInformacion(almacen);
-}
-
-function tachado() {
-    const check = document.querySelectorAll(".clickeado");
-    check.forEach((elemento) => {
-        elemento.checked = true;
-    });
 }
 
 function obtenerInformacion(arregloactual) {

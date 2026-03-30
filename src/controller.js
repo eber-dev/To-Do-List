@@ -90,3 +90,25 @@ function obtenerInformacion(arregloactual) {
     tareapendiente.textContent = pendientes + " pendientes";
     tareacompletada.textContent = completos + " completadas";
 }
+
+export function filtrartodo() {
+    almacen.forEach((elemento) => {
+        añadirTarjeta(almacen, elemento);
+    });
+}
+
+export function filtrarcompletados() {
+    almacen.forEach((elemento) => {
+        if (elemento.estado == "completado") {
+            añadirTarjeta(almacen, elemento);
+        }
+    });
+}
+
+export function filtrarpendientes() {
+    almacen.forEach((elemento) => {
+        if (elemento.estado == "pendiente") {
+            añadirTarjeta(almacen, elemento);
+        }
+    });
+}

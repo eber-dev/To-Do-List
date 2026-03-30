@@ -132,9 +132,9 @@ export function crearModal() {
     input4.name = "prioridad";
     input4.required = true;
     const opciones = [
-        { value: "1", text: "Alta Prioridad" },
-        { value: "2", text: "Media Prioridad" },
-        { value: "3", text: "Baja Prioridad" },
+        { value: "Alta Prioridad", text: "Alta Prioridad" },
+        { value: "Media Prioridad", text: "Media Prioridad" },
+        { value: "Baja Prioridad", text: "Baja Prioridad" },
     ];
 
     opciones.forEach((elemento) => {

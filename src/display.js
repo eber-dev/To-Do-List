@@ -51,12 +51,13 @@ function seccion3() {
     const parte3 = document.createElement("div");
     parte3.classList.add("parte3");
     const informacion = document.createElement("div");
-    informacion.classList.add("informacion");
+    informacion.classList.add("informacion1");
     const pendientes = document.createElement("p");
     pendientes.classList.add("pendientes");
     const completadas = document.createElement("p");
     completadas.classList.add("completadas");
     const botonesfiltro = document.createElement("div");
+    botonesfiltro.classList.add("botonesfiltro");
     const todasfiltro = document.createElement("button");
     todasfiltro.textContent = "Todas";
     const pendientesfiltro = document.createElement("button");

@@ -87,6 +87,6 @@ function obtenerInformacion(arregloactual) {
         }
     });
 
-    tareapendiente.textContent = pendientes + "pendientes";
-    tareacompletada.textContent = completos + "completadas";
+    tareapendiente.textContent = pendientes + " pendientes";
+    tareacompletada.textContent = completos + " completadas";
 }

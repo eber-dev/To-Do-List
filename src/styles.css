@@ -19,25 +19,30 @@ body {
     border: 1px solid green;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .app {
     border: 1px solid blue;
+    margin-inline: 20%;
 }
 
 .parte1 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .parte1 > h2 {
     font-size: 2rem;
+    margin-left: 5%;
 }
 
 .parte1 > button {
     display: flex;
     align-items: center;
     overflow: hidden;
+    margin-right: 5%;
 }
 
 .parte1 > button > img {
@@ -47,23 +52,52 @@ body {
 .parte2 {
     display: grid;
     grid-template-columns: 1fr;
+    margin-inline: 5%;
 }
 
 .parte2 > div {
     display: flex;
-    border: 1px solid violet;
+    border: 1px solid rgb(233, 33, 233);
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    padding-inline: 2%;
+    align-items: center;
 }
 
 .check {
     display: flex;
 }
 
+.clickeado {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
 .informacion {
     display: flex;
+    flex-direction: column;
+}
+
+.informacion > h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.informacion > p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .fecha {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fecha > img {
+    height: 3rem;
 }
 
 .prioridad {
@@ -72,4 +106,26 @@ body {
 
 .borrar {
     display: flex;
+}
+
+.borrar > button:hover {
+    cursor: pointer;
+}
+
+.parte3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 5%;
+}
+
+.informacion1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.botonesfiltro {
+    display: flex;
+    gap: 2rem;
 }

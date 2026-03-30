@@ -180,6 +180,10 @@ export function añadirTarjeta(array, tarea) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("clickeado");
+    if (tarea.estado === "completado") {
+        checkbox.checked = true;
+        tarjetas.style.textDecoration = "line-through";
+    }
     const titulo_descripcion = document.createElement("div");
     titulo_descripcion.classList.add("informacion");
     const nombretarea = document.createElement("h2");

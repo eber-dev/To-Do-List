@@ -10,7 +10,6 @@ body {
 }
 
 .container {
-    border: 1px solid black;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -24,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 15rem;
+    height: 18rem;
     width: 70%;
     position: absolute;
     left: 50%;
@@ -33,12 +32,23 @@ body {
     opacity: 0.9;
 }
 
+.titulo > h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.titulo > p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .app {
     border: 1px solid white;
     border-radius: 20px;
     position: absolute;
     width: 60%;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -62,6 +72,15 @@ body {
     overflow: hidden;
     margin-right: 5%;
     gap: 0.6rem;
+    background-color: rgb(44, 231, 34);
+    border: 1px solid rgb(44, 231, 34);
+    border-radius: 8px;
+    padding-inline: 1rem;
+}
+
+.parte1 > button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .parte1 > button > img {
@@ -79,14 +98,14 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     margin-inline: 5%;
-    height: 35rem;
+    height: 33rem;
     overflow-y: auto;
     align-content: start;
 }
 
 .parte2 > div {
     display: flex;
-    border: 1px solid rgb(233, 33, 233);
+    border: 1px solid green;
     justify-content: space-between;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -172,11 +191,11 @@ body {
 }
 
 .pendientes {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 
 .completadas {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 
 .botonesfiltro {
@@ -186,12 +205,48 @@ body {
 
 .todasfiltro {
     font-size: 1.3rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.todasfiltro:hover {
+    cursor: pointer;
+    background-color: rgb(44, 231, 34);
+    border: 1px solid rgb(44, 231, 34);
 }
 
 .pendientesfiltro {
     font-size: 1.3rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.pendientesfiltro:hover {
+    cursor: pointer;
+    background-color: rgb(44, 231, 34);
+    border: 1px solid rgb(44, 231, 34);
 }
 
 .completadasfiltro {
     font-size: 1.3rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.completadasfiltro:hover {
+    cursor: pointer;
+    background-color: rgb(44, 231, 34);
+    border: 1px solid rgb(44, 231, 34);
 }

@@ -13,18 +13,36 @@ body {
     border: 1px solid black;
     height: 100vh;
     width: 100%;
+    position: relative;
+    background-image: url("./images/fondotodolist.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .titulo {
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 15rem;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(238, 234, 234);
+    opacity: 0.9;
 }
 
 .app {
-    border: 1px solid blue;
-    margin-inline: 20%;
+    border: 1px solid white;
+    border-radius: 20px;
+    position: absolute;
+    width: 60%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0.97;
 }
 
 .parte1 {
@@ -43,10 +61,17 @@ body {
     align-items: center;
     overflow: hidden;
     margin-right: 5%;
+    gap: 0.6rem;
 }
 
 .parte1 > button > img {
     height: 2rem;
+}
+
+.parte1 > button > p {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .parte2 {
@@ -54,9 +79,8 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     margin-inline: 5%;
-    border: 1px solid black;
     height: 35rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     align-content: start;
 }
 
@@ -77,8 +101,8 @@ body {
 }
 
 .clickeado {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
 .informacion {
@@ -89,11 +113,13 @@ body {
 .informacion > h2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    font-size: 1.6rem;
 }
 
 .informacion > p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .fecha {
@@ -106,12 +132,24 @@ body {
     height: 3rem;
 }
 
+.fecha > h3 {
+    font-size: 1.3rem;
+}
+
 .prioridad {
     display: flex;
 }
 
+.prioridad > p {
+    font-size: 1.2rem;
+}
+
 .borrar {
     display: flex;
+}
+
+.borrar > button > img {
+    height: 2rem;
 }
 
 .borrar > button:hover {
@@ -123,6 +161,8 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-inline: 5%;
+    height: 4rem;
+    margin-bottom: 0.8rem;
 }
 
 .informacion1 {
@@ -131,7 +171,27 @@ body {
     gap: 2rem;
 }
 
+.pendientes {
+    font-size: 1.35rem;
+}
+
+.completadas {
+    font-size: 1.35rem;
+}
+
 .botonesfiltro {
     display: flex;
     gap: 2rem;
+}
+
+.todasfiltro {
+    font-size: 1.3rem;
+}
+
+.pendientesfiltro {
+    font-size: 1.3rem;
+}
+
+.completadasfiltro {
+    font-size: 1.3rem;
 }

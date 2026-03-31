@@ -264,10 +264,11 @@ body {
     align-items: center;
     height: 2rem;
     margin-bottom: 1rem;
+    margin-top: 0.2rem;
 }
 
 .header_form > p {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
 }
 
 .header_form > button {
@@ -320,4 +321,13 @@ body {
     padding-inline: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.formulario > button:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
 }

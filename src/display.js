@@ -26,7 +26,8 @@ function seccion1() {
     const parte1 = document.createElement("div");
     parte1.classList.add("parte1");
     const titulolistas = document.createElement("h2");
-    titulolistas.textContent = "Mis Tareas Pendientes";
+    titulolistas.textContent = "Mis Tareas";
+    titulolistas.style.color = "blue";
     const agregartarea = document.createElement("button");
     agregartarea.id = "añadir";
     const iconoagregar = document.createElement("img");

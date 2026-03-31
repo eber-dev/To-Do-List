@@ -250,3 +250,74 @@ body {
     background-color: rgb(44, 231, 34);
     border: 1px solid rgb(44, 231, 34);
 }
+
+#modal {
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 15px;
+    padding-inline: 2%;
+}
+
+.header_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.header_form > p {
+    font-size: 1.5rem;
+}
+
+.header_form > button {
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    font-size: 1.3rem;
+}
+
+.header_form > button:hover {
+    cursor: pointer;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.formulario > div > label {
+    font-size: 1.3rem;
+}
+
+.formulario > div > input {
+    height: 1.7rem;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.formulario > div > select {
+    font-size: 1rem;
+    height: 1.8rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.formulario > button {
+    align-self: center;
+    margin-top: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}

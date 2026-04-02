@@ -1,11 +1,11 @@
-# 📌 To-Do List App
+# To-Do List App
 
 A modular **To-Do List web application** built with **JavaScript (ES Modules)** and bundled using **Webpack**.  
 This project allows users to manage tasks efficiently, including creating, updating, filtering, and persisting tasks using the browser's `localStorage`.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Add new tasks through a modal form
 - Mark tasks as completed or pending
@@ -19,7 +19,7 @@ This project allows users to manage tasks efficiently, including creating, updat
 
 ---
 
-## 🧠 Project Architecture
+## Project Architecture
 
 The application is structured using a modular approach, separating responsibilities into different files:
 
@@ -34,7 +34,7 @@ src/
 
 ---
 
-## 🔹 index.js (Entry Point)
+## index.js (Entry Point)
 
 This is the main entry of the application. It initializes and connects all modules.
 
@@ -51,7 +51,7 @@ This is the main entry of the application. It initializes and connects all modul
 
 ---
 
-## 🔹 display.js (View Layer)
+## display.js (View Layer)
 
 Handles all DOM creation and UI rendering logic.
 
@@ -86,7 +86,7 @@ Handles all DOM creation and UI rendering logic.
 
 ---
 
-## 🔹 controller.js (Logic Layer)
+## controller.js (Logic Layer)
 
 Manages the application logic and acts as a bridge between UI and data.
 
@@ -145,7 +145,7 @@ These functions filter tasks based on their state and render them accordingly.
 
 ---
 
-## 🔹 box.js (Data Layer)
+##  box.js (Data Layer)
 
 Handles data persistence and storage.
 
@@ -160,7 +160,7 @@ export let almacen = JSON.parse(localStorage.getItem("local")) || [];
 
 ---
 
-## 💾 Data Persistence
+##  Data Persistence
 
 The app uses `localStorage` to persist tasks:
 
@@ -176,7 +176,7 @@ JSON.parse(localStorage.getItem("local"));
 
 ---
 
-## 📦 Data Model
+##  Data Model
 
 Each task follows this structure:
 
@@ -193,7 +193,7 @@ Each task follows this structure:
 
 ---
 
-## 🔄 Application Flow
+##  Application Flow
 
 1. The app initializes (`index.js`)
 2. Stored tasks are loaded (`renderizar`)
@@ -209,7 +209,7 @@ Each task follows this structure:
 
 ---
 
-## ⚠️ Technical Notes
+##  Technical Notes
 
 - Uses `crypto.randomUUID()` for unique IDs
 - UI is fully generated using JavaScript
@@ -221,7 +221,7 @@ Each task follows this structure:
 
 ---
 
-## 🧩 Possible Improvements
+##  Possible Improvements
 
 - Edit existing tasks
 - Add advanced form validation
@@ -231,7 +231,7 @@ Each task follows this structure:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - JavaScript (ES Modules)
 - Webpack
